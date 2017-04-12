@@ -3,7 +3,9 @@ import {ModuleWithProviders} from "@angular/core";
 import {HomeLandingComponent, AboutComponent, HomeComponent} from "./public/home.component";
 import {SecureHomeComponent} from "./secure/landing/securehome.component";
 import {MyProfileComponent} from "./secure/profile/myprofile.component";
+import {FeedsHomeComponent} from "./secure/feedshome/feedshome.component";
 import {JwtComponent} from "./secure/jwttokens/jwt.component";
+import {TransactionControlComponent} from "./secure/transactioncontrol/transactioncontrol.component";
 import {UseractivityComponent} from "./secure/useractivity/useractivity.component";
 import {AppComponent} from "./app.component";
 import {LoginComponent} from "./public/auth/login/login.component";
@@ -45,9 +47,10 @@ const secureHomeRoutes: Routes = [
         path: 'securehome', component: SecureHomeComponent, children: [
         {path: 'logout', component: LogoutComponent},
         {path: 'jwttokens', component: JwtComponent},
+        {path: 'feedshome', component: FeedsHomeComponent},
         {path: 'myprofile', component: MyProfileComponent},
         {path: 'useractivity', component: UseractivityComponent},
-        {path: '', component: MyProfileComponent}]
+        {path: '', component: FeedsHomeComponent}]
     }
 ];
 

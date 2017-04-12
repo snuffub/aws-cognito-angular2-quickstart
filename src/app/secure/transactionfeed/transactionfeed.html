@@ -1,0 +1,18 @@
+<div class="tab-content">
+	Uncategorized Transactions 
+	<ul class="nav nav-pills">
+		<li role="presentation" class="active" *ngFor="let account of accounts | FilterByAccountType:'Bank'">
+			<a data-toggle="tab" href={{account.AccountName}} >{{account.AccountName}}<span class="badge">42</span></a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div id="WellsChecking" class="tab-pane fade in active">
+			<ul class="media-list" id="transactionFeed">
+				<li *ngFor="let transaction of transactions | slice:1:4">
+					<transaction-control [transactionInfo]="transaction"></transaction-control>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+

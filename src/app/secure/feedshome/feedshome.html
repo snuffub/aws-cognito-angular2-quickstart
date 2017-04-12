@@ -1,0 +1,21 @@
+<h1 class="page-header">Feeds</h1>
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#transactionsfeed">Bank Accounts</a></li>
+    <li><a data-toggle="tab" href="#transactions">Credit Cards</a></li>
+    <li><a data-toggle="tab" href="#transactionsfeed">E-Payments</a></li>
+    <li><a data-toggle="tab" href="#transactions">Invesmtents</a></li>
+    <li><a data-toggle="tab" href="#transactions">Merchant Data</a></li>
+</ul>
+
+
+<div class="tab-content">
+    <div id="transactions" class="tab-pane fade">
+        <h3>Single</h3>
+        <transaction-control></transaction-control>
+    </div>
+    <div id="transactionsfeed" class="tab-pane fade in active">
+        <h3>Transaction feed</h3>
+        <div class="row"><transactionfeed-control></transactionfeed-control></div>
+	<div class="row"><transaction-list></transaction-list></div>
+    </div>
+</div>

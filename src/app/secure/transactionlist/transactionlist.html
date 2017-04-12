@@ -1,0 +1,29 @@
+
+<h1 class="page-header">All Transactions </h1>
+
+<div class="table-responsive">
+    <table class="table table-hover table-striped">
+        <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>type</th>
+            <th>Merchant</th>
+            <th>Description</th>
+            <th>Vendor</th>
+            <th>Category</th>
+            <th>Account</th>
+            <th>Edit</th>
+        </tr>
+        <tr *ngFor="let trans of transactionInfo" class="active">
+            <td>{{ trans.ChargeDate | date:"MM/dd/yyyy" }}</td>
+            <td>{{ trans.Amount }}</td>
+            <td>{{ trans.Type }}</td>
+            <td>{{ trans.MerchantName }}</td>
+            <td>{{ trans.Description }}</td>
+            <td>{{ trans.Vendor }}</td>
+            <td>{{ trans.Category }}</td>
+            <td>{{ trans.Account }}</td>
+            <td>Edit</td>
+        </tr>
+    </table>
+</div>
